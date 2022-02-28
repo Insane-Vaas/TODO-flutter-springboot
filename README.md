@@ -9,4 +9,7 @@ or you can can use brew command
 ``` bash
 brew install --cask flutter
 ```
-
+- Intellij IDEA CE Installation -> Use [this link](https://www.jetbrains.com/idea/) to download CE version or you can use brew command
+  ``` bash
+  brew install --cask intellij-idea-ce
+  ```
