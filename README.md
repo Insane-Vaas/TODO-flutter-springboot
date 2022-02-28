@@ -2,6 +2,5 @@
 
 ## 1.INSTALLATION
 
--Flutter Installation
-  -- Here is the link you can easily download flutter
+- Flutter Installation
 
