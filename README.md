@@ -24,3 +24,9 @@ brew install --cask android-studio
 ```
 
 ## Setting up
+
+- Open TODO Backend Folder and navigate to 
+ src
+  \_main
+    \_resources
+      \_application.properties
