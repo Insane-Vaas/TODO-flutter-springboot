@@ -31,4 +31,11 @@ brew install --cask android-studio
  open it using Intellij Idea. Change username and password accodring to your MySQL root username and password.
  
 - open VS Code and Navigate to TODOfront. Open the lib folder and run the Android or XCode emulator.
+
+## Results.
+
+After going through all these process the app will look like this.
+
+![example.gif](https://user-images.githubusercontent.com/46975685/155975451-4037b92b-ac58-43dc-9abe-47ede7380690.gif)
+
  
