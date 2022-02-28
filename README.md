@@ -10,9 +10,9 @@ or you can can use brew command
 brew install --cask flutter
 ```
 - Intellij IDEA CE Installation -> Use [this link](https://www.jetbrains.com/idea/) to download CE version or you can use brew command
-  ``` bash
-  brew install --cask intellij-idea-ce
-  ```
+``` bash
+brew install --cask intellij-idea-ce
+```
 - MySQL Installation -> Use [this link](https://dev.mysql.com/downloads/mysql/) to download MySQL.
 - VS Code Installation -> Use [this link](https://code.visualstudio.com/Download) to download VS Code / use brew command 
 ``` bash
