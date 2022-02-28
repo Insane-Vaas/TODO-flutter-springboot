@@ -23,7 +23,7 @@ brew install --cask visual-studio-code
 brew install --cask android-studio
 ```
 
-## Setting up
+## 2.Setting up
 
 - Open TODO Backend Folder and navigate to 
  src -> main -> resources -> application.properties
@@ -32,7 +32,7 @@ brew install --cask android-studio
  
 - open VS Code and Navigate to TODOfront. Open the lib folder and run the Android or XCode emulator.
 
-## Results.
+## 3.Results.
 
 After going through all these process the app will look like this.
 
