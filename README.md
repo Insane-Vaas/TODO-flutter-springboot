@@ -13,3 +13,14 @@ brew install --cask flutter
   ``` bash
   brew install --cask intellij-idea-ce
   ```
+- MySQL Installation -> Use [this link](https://dev.mysql.com/downloads/mysql/) to download MySQL.
+- VS Code Installation -> Use [this link](https://code.visualstudio.com/Download) to download VS Code / use brew command 
+``` bash
+brew install --cask visual-studio-code
+```
+- Install Android Studio -> use [this link](https://developer.android.com/studio) to download Android Studio / use brew command
+``` bash
+brew install --cask android-studio
+```
+
+## Setting up
