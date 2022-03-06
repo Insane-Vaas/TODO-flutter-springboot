@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todofront/Services/database_services.dart';
@@ -12,8 +14,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String title = "";
-  String text = "";
+  String? title = "";
+  String? text = "";
 
   List<Task>? tasks;
 
@@ -59,11 +61,13 @@ class _HomeState extends State<Home> {
                               hintText: "Title of TODO",
                             ),
                             onChanged: (value) {
-                              setState(
-                                () {
-                                  title = value;
-                                },
-                              );
+                              if (value != null) {
+                                setState(
+                                  () {
+                                    title = value;
+                                  },
+                                );
+                              }
                             },
                           ),
                         ),
@@ -85,11 +89,21 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         ElevatedButton(
-                          onPressed: () => setState(() {
-                            DatabaseService.addTask(title, text);
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const Home()));
-                          }),
+                          onPressed: () async {
+                            setState(
+                              () {
+                                if (title != "" && text != "") {
+                                  DatabaseService.addTask(title!, text!);
+                                  Future.delayed(
+                                    Duration(milliseconds: 50),
+                                    () {
+                                      getTasks();
+                                    },
+                                  );
+                                }
+                              },
+                            );
+                          },
                           child: const Text("Add"),
                         )
                       ],
@@ -104,6 +118,7 @@ class _HomeState extends State<Home> {
                           itemCount: tasksdata.tasks.length,
                           itemBuilder: (context, index) {
                             Task task = tasksdata.tasks[index];
+
                             return ListTile(
                               leading: Checkbox(
                                 onChanged: (value) => setState(
@@ -114,11 +129,11 @@ class _HomeState extends State<Home> {
                                 value: task.completed,
                               ),
                               title: Text(
-                                task.title,
+                                task.title!,
                                 style: const TextStyle(fontSize: 20),
                               ),
                               subtitle: Text(
-                                task.text,
+                                task.text!,
                                 style: const TextStyle(fontSize: 15),
                               ),
                               trailing: IconButton(
@@ -137,6 +152,7 @@ class _HomeState extends State<Home> {
                   )
                 ],
               ),
-            ));
+            ),
+          );
   }
 }
